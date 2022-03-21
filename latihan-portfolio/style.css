@@ -1,0 +1,322 @@
+:root{
+    --biru : #1E56C6;
+    --icon-color : --biru;
+}
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    color:#444;
+}
+
+#about i,
+#portfolio i,
+#contact i,
+#galery i{
+    color: var(--biru);
+}
+nav{
+    /* background: #000A51; */
+    background: var(--biru);
+}
+nav .container{
+    width:85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content:end;
+    padding:1em;
+    transform:translateY(0%);
+
+}
+.link{
+    margin-right:4em;
+}
+.link a{
+    color:white;
+}
+a{
+    text-decoration: none;
+}
+
+/* Disini mulai header/banner */
+header{
+    width: 100%;
+    height: 600px;
+    background:url('img/img1.jpg');
+    background-size: cover;
+    background-position:center;
+}
+header .container{
+    min-height: 600px;
+    width:85%;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color:white;
+}
+header .banner-content img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    border: 5px solid white;
+    box-shadow: 4px 3px 10px rgba(0,0,0,.3);
+    transition: .2s;
+            /* 0.2 = .2 */
+}
+header .banner-content img:hover{
+    transform: scale(1.1);
+}
+header .banner-content h1,
+header .banner-content h3{
+             /*   x   y  blur  warna */
+    text-shadow: 5px 5px 10px black;
+    transform:translateY(50%);
+    line-height:2em;
+}
+header .banner-content h3{
+    font-weight: 500;
+}
+
+/* Disini mulai section about */
+
+#about{
+    margin: 90px 0px;
+}
+section .container{
+    width:85%;
+    margin:0 auto;
+}
+section h1{
+    text-align:center;
+    font-size:3em;
+}
+section hr{
+    width:400px;
+    margin:0 auto;
+    border:4px solid var(--biru);
+    background:var(--biru);
+}
+.about-text-container{
+    display:flex;
+    align-items: center;
+}
+.kiri img{
+    width:350px;
+}
+.kanan p{
+    text-indent: 30px;
+    text-align: justify;
+    margin:1.5em auto;
+}
+/* DIsini mulai portfolio */
+#portfolio{
+    background: #eee;
+    padding:3em;
+}
+#portfolio .container-projects{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-between;
+}
+#portfolio .projects{
+    width:50%;
+    margin:3em 1em;
+    background:white;
+    border-radius:1em;
+    padding: 1.5em;
+    box-shadow: 3px 4px 10px rgba(0,0,0,.15);
+    transition: .3s;
+}
+#portfolio .projects:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#portfolio .projects .gambar{
+    width: 100%;
+    height: 300px;
+    background:url('img/project_1.png');
+    background-size:cover;
+    background-position:center;
+    border-radius:1em;
+    margin-bottom:1.2em;
+}
+
+#portfolio .projects a{
+    margin: 1em 0;
+    line-height:1em;
+    padding:.5em;
+    color:white;
+    background:var(--biru);
+    border-radius:.3em;
+    display: block;
+    width:100px;
+    text-align:center;
+}
+
+
+
+
+/* Disini mulai galery */
+#galery{
+    margin: 3em 0;
+}
+#galery .images{
+    display:flex;
+    margin: 2em 0;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#galery .images img{
+    width:300px;
+}
+
+/* Disini mulai section contact */
+#contact{
+    background:#eee;
+    padding-top: 4em;
+}
+.box{
+    padding-top: 2em;
+    display:flex;
+}
+.box_kiri{
+    background:#fff;
+    flex:1;
+    padding:2em;
+    box-sizing: border-box;
+    border-radius:1em;
+    box-shadow: 4px 3px 10px rgba(0,0,0,.15);
+    
+}
+.box_kiri h3{
+    text-align:center;
+}
+.box_kiri ul{
+    list-style:none;
+}
+.box_kiri ul li{
+    margin-bottom:1.1em;
+}
+.box_kiri ul li a{
+    font-size:1.2em;
+    color:#666;
+}
+.box_kanan{
+    flex:1;
+    padding:2em;
+    font-size:1.2em;
+}
+.box_kanan form input, textarea{
+    width:100%;
+    padding:.5em;
+    margin-bottom:1em;
+}
+#nama, #email, #pesan{
+    font-size:1em;
+    border:none;
+    border-radius:.5em;
+    padding:.3em;
+}
+.box_kanan form #kirim{
+    border:none;
+    padding:.5em;
+    color:white;
+    background:var(--biru);
+    border-radius:.3em;
+    width:5em;
+    text-align:center;
+    font-size:1.5em;
+    transition:.3s;
+}
+.box_kanan form #kirim:hover{
+    cursor:pointer;
+    background: rgba(0,0,0,.9);
+}
+
+/*  */
+footer{
+    margin-top:3em;
+    background: var(--biru);
+    /* padding: 3em; */
+    padding:calc(1.5em + 1.5em);
+    text-align:center;
+    color:white;
+}
+.ke_atas{
+    position:fixed;
+    right: 50px;
+    bottom: 50px;
+    font-size:2.5em;
+    color:white;
+    border-radius:10%;
+    background:var(--biru);
+    opacity:.4;
+    transition:.3s;
+    border:3px solid white;
+}
+.ke_atas:hover{
+    opacity: .7;
+    transform:scale(1.1);
+}
+.btn-toggle{
+    display: none;
+}
+
+.show{
+    position:relative;
+    top:-100px;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    line-height:3em;
+    font-size:1.5em;
+    height:40vh;
+}
+@media screen and (max-width: 870px){
+    .link{
+    }
+    
+    .btn-toggle{
+        position:absolute;
+        display:block;
+        top:1em;
+        right:1em;
+    }
+    .btn-toggle .white{
+        background:white;
+        width:2em;
+        height:7px;
+        margin-bottom:5px;
+    }
+
+    #about .about-text-container{
+        display:flex;
+        flex-direction: column;
+    }
+    #portfolio .container-projects{
+         display: flex;
+         flex-direction: column;
+         width:85%;
+    }
+    #portfolio .projects{
+         width:100%;
+    }
+
+    .box{
+        display:flex;
+        flex-direction: column;
+    }
+
+}
